@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: [],
-  originWhitelist: ["http://localhost", "https://localhost"],
+  originWhitelist: ["http://localhost", "https://localhost", "http://www.tolstyslovar.com"],
   requireHeader: ['origin'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
